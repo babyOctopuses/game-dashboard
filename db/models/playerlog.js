@@ -20,9 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      createdAt: false,
-      updatedAt: false,
-      modelName: 'user_game_history',
+      timestamps: false,
+      modelName: 'PlayerLog',
+      tableName: 'PlayerLogs',
     }
   )
   return PlayerLog

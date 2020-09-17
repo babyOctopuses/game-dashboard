@@ -1,6 +1,6 @@
 const Router = require('express-promise-router')
 const router = new Router()
-const db = require('../models')
+const db = require('../db/models')
 
 router.get('/', async (req, res) => {
   const players = await db.Player.findAll()

@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasOne(models, {
-        foreignKey: 'player',
-      })
-      models.belongTo(this)
+      // this.hasOne(models, {
+      //   foreignKey: 'player',
+      // })
+      // models.belongTo(this)
     }
   }
   PlayerBio.init(
@@ -24,10 +24,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      createdAt: false,
-      updatedAt: false,
-      modelName: 'user_game_biodata',
+      timestamps: false,
+      modelName: 'PlayerBio',
+      tableName: 'PlayerBios',
     }
   )
+  // PlayerBio.associate(models.Player)
   return PlayerBio
 }

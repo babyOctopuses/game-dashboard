@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models, {
-        foreignKey: 'username',
-      })
-      models.belongsTo(this)
+      // this.hasMany(models, {
+      //   foreignKey: 'username',
+      // })
+      // models.belongsTo(this)
     }
   }
   Player.init(
@@ -22,9 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'user_player',
+      modelName: 'Player',
+      tableName: 'Players',
     }
   )
-  Player.associate(PlayerLog)
+  // Player.associate(models.PlayerLog)
   return Player
 }
