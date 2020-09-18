@@ -1,1 +1,1 @@
-# exercise-sequelize
+# Challenge Chapter 6 Submission
