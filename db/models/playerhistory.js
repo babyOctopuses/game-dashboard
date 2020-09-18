@@ -7,8 +7,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
       },
-      level: { type: DataTypes.INTEGER, defaultValue: 1 },
-      experience: { type: DataTypes.INTEGER, defaultValue: 0 },
+      level: { type: DataTypes.INTEGER, defaultValue: 1, allowNull: false },
+      experience: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        allowNull: false,
+      },
       last_login: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
     },
     {

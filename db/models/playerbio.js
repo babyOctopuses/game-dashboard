@@ -7,9 +7,13 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
       },
-      first_name: { type: DataTypes.STRING, defaultValue: '' },
-      last_name: { type: DataTypes.STRING, defaultValue: '' },
-      city: { type: DataTypes.STRING, defaultValue: '' },
+      first_name: {
+        type: DataTypes.STRING,
+        defaultValue: '',
+        allowNull: false,
+      },
+      last_name: { type: DataTypes.STRING, defaultValue: '', allowNull: false },
+      city: { type: DataTypes.STRING, defaultValue: '', allowNull: false },
     },
     {
       sequelize,

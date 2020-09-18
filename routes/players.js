@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   const players = await db.Player.findAll({
     include: [db.PlayerBio, db.PlayerHistory],
   })
-  res.status(200).json(players)
+  res.render('players', { players })
 })
 
 router.get('/log', async (req, res) => {

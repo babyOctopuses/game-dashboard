@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Articles | All</title>
+  </head>
+  <body>
+    <% players.forEach(i => { %>
+    <div>
+      <p><%= i.username %></p>
+      <p><%= i.email %></p>
+      <p><%= i.PlayerBio.city %></p>
+      <p><%= i.PlayerHistories[0].level %></p>
+    </div>
+    <% }) %>
+  </body>
+</html>

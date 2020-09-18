@@ -4,6 +4,8 @@ const app = express()
 const playersRoute = require('./routes/players')
 const middleware = require('./utils/middleware')
 
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/api/players', playersRoute)
