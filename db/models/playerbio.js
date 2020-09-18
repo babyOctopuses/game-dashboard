@@ -1,23 +1,12 @@
-'use strict'
-const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
-  class PlayerBio extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-      // this.hasOne(models, {
-      //   foreignKey: 'player',
-      // })
-      // models.belongTo(this)
-    }
-  }
-  PlayerBio.init(
+  const PlayerBio = sequelize.define(
+    'PlayerBio',
     {
-      player_id: { type: DataTypes.STRING, allowNull: false },
+      uid: {
+        type: DataTypes.UUID,
+        primaryKey: true,
+        allowNull: false,
+      },
       first_name: { type: DataTypes.STRING, defaultValue: '' },
       last_name: { type: DataTypes.STRING, defaultValue: '' },
       city: { type: DataTypes.STRING, defaultValue: '' },
@@ -26,9 +15,14 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       timestamps: false,
       modelName: 'PlayerBio',
-      tableName: 'PlayerBios',
+      tableName: 'user_game_biodata',
     }
   )
-  // PlayerBio.associate(models.Player)
+
+  PlayerBio.associate = (models) => {
+    PlayerBio.belongsTo(models.Player, {
+      foreignKey: 'uid',
+    })
+  }
   return PlayerBio
 }

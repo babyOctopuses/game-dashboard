@@ -3,15 +3,13 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
-      'PlayerBios',
+      'user_game_biodata',
       [
         {
-          player_id: 'harrypotter',
+          uid: '06896bd4-8cbc-48c6-8c46-9364a6d939c4',
           first_name: 'Harry',
           last_name: 'Potter',
           city: 'London',
-          createdAt: new Date(),
-          updatedAt: new Date(),
         },
       ],
       {}
@@ -19,6 +17,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('PlayerBios', null, {})
+    await queryInterface.bulkDelete('user_game_biodata', null, {})
   },
 }

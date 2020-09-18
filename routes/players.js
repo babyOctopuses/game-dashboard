@@ -3,12 +3,14 @@ const router = new Router()
 const db = require('../db/models')
 
 router.get('/', async (req, res) => {
-  const players = await db.Player.findAll()
+  const players = await db.Player.findAll({
+    include: [db.PlayerBio, db.PlayerHistory],
+  })
   res.status(200).json(players)
 })
 
 router.get('/log', async (req, res) => {
-  const players = await db.PlayerLog.findAll()
+  const players = await db.PlayerHistory.findAll()
   res.status(200).json(players)
 })
 
