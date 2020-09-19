@@ -2,9 +2,12 @@ module.exports = (sequelize, DataTypes) => {
   const PlayerHistory = sequelize.define(
     'PlayerHistory',
     {
+      log_id: {
+        primaryKey: true,
+        type: DataTypes.UUID,
+      },
       user_id: {
         type: DataTypes.UUID,
-        primaryKey: true,
         allowNull: false,
       },
       level: { type: DataTypes.INTEGER, defaultValue: 1, allowNull: false },
@@ -26,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   PlayerHistory.associate = (models) => {
     PlayerHistory.belongsTo(models.Player, {
       foreignKey: 'user_id',
+      onDelete: 'CASCADE',
     })
   }
 

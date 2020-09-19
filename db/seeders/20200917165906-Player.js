@@ -12,6 +12,20 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          id: '6dcb3b28-d798-4cec-80b5-516bfe18c25b',
+          username: 'ron.weasley',
+          email: 'ron.weasley@gmail.com',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          id: '7bbe267d-e1aa-41d5-9a48-50e74fc04400',
+          username: 'hermione',
+          email: 'hermione@gmail.com',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     )

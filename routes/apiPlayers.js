@@ -1,6 +1,6 @@
 const Router = require('express-promise-router')
 const router = new Router()
-const controller = require('../controllers/playersController')
+const controller = require('../controllers/apiController')
 
 router.get('/players', controller.getAllPlayers)
 router.get('/players/:id', controller.getPlayerById)

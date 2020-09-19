@@ -2,9 +2,14 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('user_game_history', {
-      user_id: {
+      log_id: {
+        type: Sequelize.UUID,
         allowNull: false,
         primaryKey: true,
+        defaultValue: Sequelize.UUIDV4,
+      },
+      user_id: {
+        allowNull: false,
         type: Sequelize.UUID,
       },
       level: {

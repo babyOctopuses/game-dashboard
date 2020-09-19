@@ -11,6 +11,18 @@ module.exports = {
           last_name: 'Potter',
           city: 'London',
         },
+        {
+          uid: '6dcb3b28-d798-4cec-80b5-516bfe18c25b',
+          first_name: 'Ronald',
+          last_name: 'Weasley',
+          city: 'Liverpool',
+        },
+        {
+          uid: '7bbe267d-e1aa-41d5-9a48-50e74fc04400',
+          first_name: 'Hermione',
+          last_name: 'Granger',
+          city: 'Manchester',
+        },
       ],
       {}
     )

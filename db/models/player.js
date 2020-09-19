@@ -19,13 +19,17 @@ module.exports = (sequelize, DataTypes) => {
   )
   Player.associate = (models) => {
     Player.hasOne(models.PlayerBio, {
-      foreignKey: 'uid',
-      onDelete: 'CASCADE',
+      foreignKey: {
+        name: 'uid',
+        allowNull: false,
+      },
     })
 
     Player.hasMany(models.PlayerHistory, {
-      foreignKey: 'user_id',
-      onDelete: 'CASCADE',
+      foreignKey: {
+        name: 'user_id',
+        allowNull: false,
+      },
     })
   }
   return Player
