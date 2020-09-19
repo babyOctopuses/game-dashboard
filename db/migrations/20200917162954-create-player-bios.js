@@ -6,6 +6,12 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
+        references: {
+          model: 'user_game',
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       first_name: {
         type: Sequelize.STRING,

@@ -18,12 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   )
   Player.associate = (models) => {
-    Player.hasOne(models.PlayerBio, {
-      foreignKey: {
-        name: 'uid',
-        allowNull: false,
-      },
-    })
+    Player.hasOne(models.PlayerBio)
 
     Player.hasMany(models.PlayerHistory, {
       foreignKey: {

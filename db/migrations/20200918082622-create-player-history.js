@@ -11,6 +11,12 @@ module.exports = {
       user_id: {
         allowNull: false,
         type: Sequelize.UUID,
+        references: {
+          model: 'user_game',
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       level: {
         type: Sequelize.INTEGER,

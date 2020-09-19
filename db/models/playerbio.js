@@ -24,10 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   )
 
   PlayerBio.associate = (models) => {
-    PlayerBio.belongsTo(models.Player, {
-      foreignKey: 'uid',
-      onDelete: 'CASCADE',
-    })
+    PlayerBio.belongsTo(models.Player)
   }
   return PlayerBio
 }
