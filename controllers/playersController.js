@@ -31,7 +31,8 @@ const createPlayer = async (req, res) => {
       },
       PlayerHistories: [
         {
-          uid: uuid,
+          log_id: uuidv4(),
+          user_id: uuid,
         },
       ],
     },
