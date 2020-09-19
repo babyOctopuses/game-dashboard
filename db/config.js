@@ -23,5 +23,8 @@ module.exports = {
     dialect: 'postgres',
     protocol: 'postgres',
     port: '5432',
+    production: {
+      use_env_variable: 'DATABASE_URL',
+    },
   },
 }
