@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./head.ejs') %>
+    <title>Update Player</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h3>Update Player</h3>
+      <a href="/players/<%= player.id %>">Back to Player Detail</a>
+      <div class="row">
+        <div class="col-7">
+          <p>Edit on the form field to update.</p>
+          <form
+            method="POST"
+            action="/players/update/<%= player.id %>"
+            class="mt-5"
+          >
+            <div class="form-group">
+              <label for="exampleInputUsername1">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputUsername1"
+                name="username"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                name="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputUsername1">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputFirstName1"
+                name="first_name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputLastName1">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputLastName1"
+                name="last_name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputCity1">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputCity1"
+                name="city"
+              />
+            </div>
+            <button type="submit" class="btn btn-outline-info">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="username" data-test="<%= player.username %>"></div>
+    <div id="email" data-test="<%= player.email %>"></div>
+    <div id="first_name" data-test="<%= player.PlayerBio.first_name %>"></div>
+    <div id="last_name" data-test="<%= player.PlayerBio.last_name %>"></div>
+    <div id="city" data-test="<%= player.PlayerBio.city %>"></div>
+    <script>
+      document.getElementById(
+        'exampleInputUsername1'
+      ).value = document.getElementById('username').dataset.test
+      document.getElementById(
+        'exampleInputEmail1'
+      ).value = document.getElementById('email').dataset.test
+      document.getElementById(
+        'exampleInputFirstName1'
+      ).value = document.getElementById('first_name').dataset.test
+      document.getElementById(
+        'exampleInputLastName1'
+      ).value = document.getElementById('last_name').dataset.test
+      document.getElementById(
+        'exampleInputCity1'
+      ).value = document.getElementById('city').dataset.test
+    </script>
+  </body>
+</html>

@@ -15,7 +15,7 @@ const getPlayerById = async (req, res) => {
     },
     include: [db.PlayerBio, db.PlayerHistory],
   })
-  res.json({ player })
+  res.render('players/playerDetail', { player })
 }
 
 const createPlayer = async (req, res) => {
@@ -51,7 +51,17 @@ const deletePlayer = async (req, res) => {
     },
   })
 
-  res.json({ status: 'Deleted' })
+  res.render('delete')
+}
+
+const updatePlayerForm = async (req, res) => {
+  const player = await db.Player.findOne({
+    where: {
+      id: req.params.id,
+    },
+    include: [db.PlayerBio, db.PlayerHistory],
+  })
+  res.render('update', { player })
 }
 
 const updatePlayer = async (req, res) => {
@@ -91,7 +101,7 @@ const updatePlayer = async (req, res) => {
     }
   )
 
-  res.json({ ok: 'Updated' })
+  res.render('update-success', { id: req.params.id })
 }
 
 const login = async (req, res) => {
@@ -113,6 +123,7 @@ module.exports = {
   getPlayerById,
   createPlayer,
   deletePlayer,
+  updatePlayerForm,
   updatePlayer,
   login,
   loginHandler,
