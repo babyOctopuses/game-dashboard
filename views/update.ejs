@@ -15,78 +15,114 @@
             method="POST"
             action="/players/update/<%= player.id %>"
             class="mt-5"
+            name="updateForm"
           >
             <div class="form-group">
-              <label for="exampleInputUsername1">Username</label>
+              <label for="exampleInputUsername1"
+                >Username
+                <input
+                  type="button"
+                  value="Clear"
+                  class="btn btn-light"
+                  onclick="document.getElementById('exampleInputUsername1').value = ''"
+                />
+              </label>
               <input
                 type="text"
                 class="form-control"
                 id="exampleInputUsername1"
                 name="username"
+                value="<%= player.username %>"
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
+              <label for="exampleInputEmail1"
+                >Email
+                <input
+                  type="button"
+                  value="Clear"
+                  class="btn btn-light"
+                  onclick="document.getElementById('exampleInputEmail1').value = ''"
+                />
+              </label>
               <input
                 type="email"
                 class="form-control"
                 id="exampleInputEmail1"
                 name="email"
+                value="<%= player.email %>"
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputUsername1">First Name</label>
+              <label for="exampleInputUsername1"
+                >First Name
+                <input
+                  type="button"
+                  value="Clear"
+                  class="btn btn-light"
+                  onclick="document.getElementById('exampleInputFirstName1').value = ''"
+                />
+              </label>
               <input
                 type="text"
                 class="form-control"
                 id="exampleInputFirstName1"
                 name="first_name"
+                value="<%= player.PlayerBio.first_name %>"
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputLastName1">Last Name</label>
+              <label for="exampleInputLastName1"
+                >Last Name
+                <input
+                  type="button"
+                  value="Clear"
+                  class="btn btn-light"
+                  onclick="document.getElementById('exampleInputLastName1').value = ''"
+                />
+              </label>
               <input
                 type="text"
                 class="form-control"
                 id="exampleInputLastName1"
                 name="last_name"
+                value="<%= player.PlayerBio.last_name %>"
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputCity1">City</label>
+              <label for="exampleInputCity1"
+                >City
+                <input
+                  type="button"
+                  value="Clear"
+                  class="btn btn-light"
+                  onclick="document.getElementById('exampleInputCity1').value = ''"
+                />
+              </label>
               <input
                 type="text"
                 class="form-control"
                 id="exampleInputCity1"
                 name="city"
+                value="<%= player.PlayerBio.city %>"
               />
             </div>
             <button type="submit" class="btn btn-outline-info">Submit</button>
+            <input
+              type="button"
+              value="CLear All"
+              class="btn btn-outline-info"
+              onclick="
+              document.getElementById('exampleInputCity1').value = '';
+              document.getElementById('exampleInputLastName1').value = '';
+              document.getElementById('exampleInputFirstName1').value = '';
+              document.getElementById('exampleInputUsername1').value = '';
+              document.getElementById('exampleInputEmail1').value = '';
+              "
+            />
           </form>
         </div>
       </div>
     </div>
-    <div id="username" data-test="<%= player.username %>"></div>
-    <div id="email" data-test="<%= player.email %>"></div>
-    <div id="first_name" data-test="<%= player.PlayerBio.first_name %>"></div>
-    <div id="last_name" data-test="<%= player.PlayerBio.last_name %>"></div>
-    <div id="city" data-test="<%= player.PlayerBio.city %>"></div>
-    <script>
-      document.getElementById(
-        'exampleInputUsername1'
-      ).value = document.getElementById('username').dataset.test
-      document.getElementById(
-        'exampleInputEmail1'
-      ).value = document.getElementById('email').dataset.test
-      document.getElementById(
-        'exampleInputFirstName1'
-      ).value = document.getElementById('first_name').dataset.test
-      document.getElementById(
-        'exampleInputLastName1'
-      ).value = document.getElementById('last_name').dataset.test
-      document.getElementById(
-        'exampleInputCity1'
-      ).value = document.getElementById('city').dataset.test
-    </script>
   </body>
 </html>
