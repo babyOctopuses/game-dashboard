@@ -5,7 +5,7 @@ const getAllPlayers = async (req, res) => {
   const players = await db.Player.findAll({
     include: [db.PlayerBio, db.PlayerHistory],
   })
-  res.json({ players })
+  res.render('players/allPlayers', { players })
 }
 
 const getPlayerById = async (req, res) => {
@@ -94,10 +94,26 @@ const updatePlayer = async (req, res) => {
   res.json({ ok: 'Updated' })
 }
 
+const login = async (req, res) => {
+  res.render('login')
+}
+
+const loginHandler = async (req, res) => {
+  const body = req.body
+
+  if ((req, body.username === 'admin' && req.body.password === 'admin')) {
+    res.redirect('/players')
+  }
+
+  res.render('login')
+}
+
 module.exports = {
   getAllPlayers,
   getPlayerById,
   createPlayer,
   deletePlayer,
   updatePlayer,
+  login,
+  loginHandler,
 }
