@@ -18,6 +18,10 @@ const getPlayerById = async (req, res) => {
   res.render('players/playerDetail', { player })
 }
 
+const createPlayerForm = async (req, res) => {
+  res.render('create')
+}
+
 const createPlayer = async (req, res) => {
   const player = req.body
   const uuid = uuidv4()
@@ -41,7 +45,7 @@ const createPlayer = async (req, res) => {
     }
   )
 
-  res.json({ status: 'Created' })
+  res.render('create-success')
 }
 
 const deletePlayer = async (req, res) => {
@@ -121,6 +125,7 @@ const loginHandler = async (req, res) => {
 module.exports = {
   getAllPlayers,
   getPlayerById,
+  createPlayerForm,
   createPlayer,
   deletePlayer,
   updatePlayerForm,
