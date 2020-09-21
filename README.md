@@ -9,7 +9,7 @@ https://binar-ch6-bona.herokuapp.com/
 
 ### Description
 
-This is CRUD app using NodeJS, ExpressJS, Sequelize, PostgreSQL, and EJS. There are 4 tables on the database after installation: `user_game`, `user_game_biodata`, `user_game_history`, `SequelizeMeta` (store postgres setting).
+This is CRUD app using NodeJS, ExpressJS, Sequelize, PostgreSQL, and EJS. There are 4 tables on the database after installation: `user_game`, `user_game_biodata`, `user_game_history`, `SequelizeMeta` (stores postgres setting).
 
 Routes:
 
@@ -106,7 +106,7 @@ or
 $ yarn run dev
 ```
 
-Open http://localhost:8080 or http://localhost:3000 (deault port if there is no PORT on .env file) to view it in your browser.
+Open http://localhost:8080 or http://localhost:3000 (default port if there is no PORT on .env file) to view it in your browser.
 
 The app will automatically reload if you make changes to the code.
 You will see the build errors and warnings in the console.
