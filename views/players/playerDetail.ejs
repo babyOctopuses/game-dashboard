@@ -8,6 +8,13 @@
     <div class="container mt-5">
       <h3>Player Detail</h3>
       <a href="/players"><< Back to Players list</a>
+      <div class="alert alert-info mt-3" role="alert">
+        <p>
+          <strong>DELETE</strong> operation - (ON CASCADE) Table
+          <samp>user_game</samp>, <samp>user_game_biodata</samp> and
+          <samp>user_game_history</samp>.
+        </p>
+      </div>
       <div class="mt-5">
         <a href="update-player/<%= player.id %>">
           <button class="btn btn-outline-success">Update</button>
