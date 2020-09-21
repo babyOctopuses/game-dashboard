@@ -27,11 +27,11 @@ Routes:
 RESTful API:
 
 ```
-GET - /players
-GET - /players/:id
-POST - /players/create
-DELETE - /players/delete/:id
-PUT - /players/update/:id
+GET - /api/players
+GET - /api/players/:id
+POST - /api/players/create
+DELETE - /api/players/delete/:id
+PUT - /api/players/update/:id
 ```
 
 Info
