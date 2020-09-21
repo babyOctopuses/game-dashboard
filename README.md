@@ -89,7 +89,7 @@ PORT=8080
 
 Run sequelize to migrate and create table with seeders.
 
-if database for this repo doesn.t exist, create it using this command.
+If database for this repo doesn't exist, create it using this command.
 Skip this command if you already have the database. (Don't forget to add it on .env DB_DEV)
 ```
 $ npx sequelize db:create
