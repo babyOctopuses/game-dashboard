@@ -76,7 +76,7 @@ Create a new file named `.env`. Update the new file with your database credentia
 USER="[INSERT_DATABASE_USER]"
 PASS="[INSERT_DATABASE_PASSWORD]"
 HOST="[INSERT_DATABASE_HOST]"
-DB_DEV="[INSERT_DATABASE_DEVELOPMENT]"
+DB_DEV="[INSERT_NEW_DATABASE_DEVELOPMENT]"
 DB_TEST="[INSERT_DATABASE_TEST]"
 USER_PROD="[INSERT_USER_PRODUCTION]"
 PASS_PROD="[INSERT_PASSWORD_PRODUCTION]"
@@ -89,6 +89,13 @@ PORT=8080
 
 Run sequelize to migrate and create table with seeders.
 
+if database for this repo doesn.t exist, create it using this command.
+Skip this command if you already have the database. (Don't forget to add it on .env DB_DEV)
+```
+$ npx sequelize db:create
+```
+
+Run this after database creation
 ```
 $ npx sequelize db:migrate
 $ npx sequelize db:seed:all
