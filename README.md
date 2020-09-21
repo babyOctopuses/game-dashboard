@@ -46,7 +46,7 @@ Info
 
 ## Installation
 
-**Step 1. Clone the code into a fresh folder**
+**Step 1. Clone the code into a fresh folder.**
 
 ```
 $ git clone git@github.com:bonasunu/binar-ch6-bona.git
@@ -67,16 +67,7 @@ or
 $ yarn
 ```
 
-**Step 3. run sequelize**
-
-Run sequelize to migrate and create table with seeders.
-
-```
-$ npx sequelize db:migrate
-$ npx sequelize db:seed:all
-```
-
-**Step 4: Update environment variables and run the Server.**
+**Step 3: Update environment variables.**
 
 Create a new file named `.env`. Update the new file with your database credentials. It should look similar to this:
 
@@ -94,6 +85,16 @@ DB_PROD="[INSERT_DATABASE_PRODUCTION]"
 PORT=8080
 ```
 
+**Step 4. Run sequelize**
+
+Run sequelize to migrate and create table with seeders.
+
+```
+$ npx sequelize db:migrate
+$ npx sequelize db:seed:all
+```
+
+**Step 5. Run the Server**
 Now we're ready to start our server which is as simple as:
 
 ```
