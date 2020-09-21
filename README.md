@@ -2,12 +2,12 @@
 
 Binar Academy Bootcamp Chapter 6 Submission by Bonaventura Sunu
 
-### Demo
+## Demo
 
 Link for demo
 https://binar-ch6-bona.herokuapp.com/
 
-### Description
+## Description
 
 This is CRUD app using NodeJS, ExpressJS, Sequelize, PostgreSQL, and EJS. There are 4 tables on the database after installation: `user_game`, `user_game_biodata`, `user_game_history`, `SequelizeMeta` (stores postgres setting).
 
@@ -44,7 +44,7 @@ Info
 - `utils/middleware.js` unknown endpoints and error handler middleware
 - `.sequelizerc` setting for sequelize initialization
 
-### Installation
+## Installation
 
 **Step 1. Clone the code into a fresh folder**
 
@@ -72,8 +72,8 @@ $ yarn
 Run sequelize to migrate and create table with seeders.
 
 ```
-$ sequelize db:migrate
-$ sequelize db:seed:all
+$ npx sequelize db:migrate
+$ npx sequelize db:seed:all
 ```
 
 **Step 4: Update environment variables and run the Server.**
