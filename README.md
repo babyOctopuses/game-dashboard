@@ -1,6 +1,4 @@
-# Challenge Chapter 6 Submission
-
-Binar Academy Bootcamp Chapter 6 Submission by Bonaventura Sunu
+## CRUD Management Dashboard
 
 ## Demo
 
